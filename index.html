@@ -119,7 +119,6 @@
         <button onclick="showSection('servicios')">Servicios</button>
         <button onclick="showSection('contacto')">Contacto</button>
         <button onclick="showSection('grupos')">Grupos de Apoyo</button>
-        <button onclick="showSection('Seccion1')">Seccion1</button>
         <button onclick="showLogin()">Iniciar Sesión</button>
     </nav>
     
@@ -150,12 +149,6 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
         
     </section>
 
-    <section id="seccion1">
-        <h2>Seccion 1</h2>
-        <p id="contact-info">putita putota:</p>
-        
-    </section>
-    
     <section id="grupos">
         <h2>Grupos de Apoyo</h2>
         <p id="groups-info">Contamos con grupos de apoyo para diversas necesidades, incluyendo:</p>
@@ -181,9 +174,6 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
         
         <h3>Contacto</h3>
         <textarea id="contact-edit" rows="4" placeholder="Editar información de contacto..."></textarea>
-
-         <h3>Seccion1</h3>
-        <textarea id="Seccion1-edit" rows="4" placeholder="Editar información de Seccion1..."></textarea>
         
         <h3>Grupos de Apoyo</h3>
         <textarea id="groups-edit" rows="4" placeholder="Editar información de grupos..."></textarea>
@@ -204,13 +194,11 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
             
             const servicesInfo = localStorage.getItem('servicesInfo') || "Ofrecemos una amplia gama de servicios médicos, incluyendo:\n- Urgencias\n- Pediatría\n- Ginecología\n- Cirugía General\n- Psicología";
             const contactInfo = localStorage.getItem('contactInfo') || "Para más información, contáctanos al siguiente número:";
-            const Seccion1Info = localStorage.getItem('Seccion1Info') || "putita putota";
             const groupsInfo = localStorage.getItem('groupsInfo') || "Contamos con grupos de apoyo para diversas necesidades, incluyendo:\n- Apoyo psicológico\n- Grupos de pacientes crónicos\n- Asesoramiento familiar";
 
            
             document.getElementById('services-info').innerText = servicesInfo;
             document.getElementById('contact-info').innerText = contactInfo;
-            document.getElementById('Seccion1-info').innerText = Seccion1Info;
             document.getElementById('groups-info').innerText = groupsInfo;
         }
 
@@ -237,7 +225,6 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
               
                 document.getElementById('services-edit').value = document.getElementById('services-info').innerText;
                 document.getElementById('contact-edit').value = document.getElementById('contact-info').innerText;
-                document.getElementById('Seccion1-edit').value = document.getElementById('Seccion1-info').innerText;
                 document.getElementById('groups-edit').value = document.getElementById('groups-info').innerText;
 
                 document.getElementById('login-message').classList.add('hidden');
@@ -252,21 +239,18 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
          
             const newServicesInfo = document.getElementById('services-edit').value;
             const newContactInfo = document.getElementById('contact-edit').value;
-            const newSeccion1Info = document.getElementById('Seccion1-edit').value;
             const newGroupsInfo = document.getElementById('groups-edit').value;
 
             // Actualizar el contenido de las secciones correspondientes
             
             document.getElementById('services-info').innerText = newServicesInfo;
             document.getElementById('contact-info').innerText = newContactInfo;
-            document.getElementById('Seccion1-info').innerText = newSeccion1Info;
             document.getElementById('groups-info').innerText = newGroupsInfo
 
             // Guardar cambios en Local Storage
            ion
             localStorage.setItem('servicesInfo', newServicesInfo);
             localStorage.setItem('contactInfo', newContactInfo);
-            localStorage.setItem('Seccion1Info', newSeccion1Info);
             localStorage.setItem('groupsInfo', newGroupsInfo);
 
             alert("Cambios guardados exitosamente.");
