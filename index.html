@@ -145,12 +145,12 @@
     
     <section id="seccion1">
         <h2>Sección 1</h2>
-        <p>Contenido de la Sección 1. Aquí puedes agregar la información que desees presentar.</p>
+        <p id="seccion1-info">Contenido de la Sección 1. Aquí puedes agregar la información que desees presentar.</p>
     </section>
 
     <section id="seccion2">
         <h2>Sección 2</h2>
-        <p>Contenido de la Sección 2. Aquí puedes agregar la información que desees presentar.</p>
+        <p id="seccion2-info">Contenido de la Sección 2. Aquí puedes agregar la información que desees presentar.</p>
     </section>
 
     <section id="servicios">
@@ -187,6 +187,12 @@
         
         <h3>Grupos de Apoyo</h3>
         <textarea id="groups-edit" rows="4" placeholder="Editar información de grupos..."></textarea>
+
+        <h3>Sección 1</h3>
+        <textarea id="seccion1-edit" rows="4" placeholder="Editar información de sección 1..."></textarea>
+
+        <h3>Sección 2</h3>
+        <textarea id="seccion2-edit" rows="4" placeholder="Editar información de sección 2..."></textarea>
         
         <button onclick="saveEdits()">Guardar Cambios</button>
     </div>
@@ -203,10 +209,14 @@
             const servicesInfo = localStorage.getItem('servicesInfo') || "Ofrecemos una amplia gama de servicios médicos, incluyendo:\n- Urgencias\n- Pediatría\n- Ginecología\n- Cirugía General\n- Psicología";
             const contactInfo = localStorage.getItem('contactInfo') || "Para más información, contáctanos al siguiente número:";
             const groupsInfo = localStorage.getItem('groupsInfo') || "Contamos con grupos de apoyo para diversas necesidades, incluyendo:\n- Apoyo psicológico\n- Grupos de pacientes crónicos\n- Asesoramiento familiar";
+            const seccion1Info = localStorage.getItem('seccion1Info') || "Contenido de la Sección 1. Aquí puedes agregar la información que desees presentar.";
+            const seccion2Info = localStorage.getItem('seccion2Info') || "Contenido de la Sección 2. Aquí puedes agregar la información que desees presentar.";
 
             document.getElementById('services-info').innerText = servicesInfo;
             document.getElementById('contact-info').innerText = contactInfo;
             document.getElementById('groups-info').innerText = groupsInfo;
+            document.getElementById('seccion1-info').innerText = seccion1Info;
+            document.getElementById('seccion2-info').innerText = seccion2Info;
         }
 
         function showSection(sectionId) {
@@ -232,6 +242,8 @@
                 document.getElementById('services-edit').value = document.getElementById('services-info').innerText;
                 document.getElementById('contact-edit').value = document.getElementById('contact-info').innerText;
                 document.getElementById('groups-edit').value = document.getElementById('groups-info').innerText;
+                document.getElementById('seccion1-edit').value = document.getElementById('seccion1-info').innerText;
+                document.getElementById('seccion2-edit').value = document.getElementById('seccion2-info').innerText;
 
                 document.getElementById('login-message').classList.add('hidden');
             } else {
@@ -244,31 +256,23 @@
             const newServicesInfo = document.getElementById('services-edit').value;
             const newContactInfo = document.getElementById('contact-edit').value;
             const newGroupsInfo = document.getElementById('groups-edit').value;
+            const newSeccion1Info = document.getElementById('seccion1-edit').value;
+            const newSeccion2Info = document.getElementById('seccion2-edit').value;
 
             document.getElementById('services-info').innerText = newServicesInfo;
             document.getElementById('contact-info').innerText = newContactInfo;
             document.getElementById('groups-info').innerText = newGroupsInfo;
+            document.getElementById('seccion1-info').innerText = newSeccion1Info;
+            document.getElementById('seccion2-info').innerText = newSeccion2Info;
 
-            // Aquí deberías enviar los cambios a un servicio de backend para guardarlos en internet
-            // Ejemplo (necesitarías un backend que soporte esto):
-            /*
-            fetch('https://tu-api.com/guardar', {
-                method: 'POST',
-                body: JSON.stringify({
-                    servicesInfo: newServicesInfo,
-                    contactInfo: newContactInfo,
-                    groupsInfo: newGroupsInfo
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => alert("Cambios guardados exitosamente."))
-            .catch(error => console.error('Error:', error));
-            */
+            // Guardar cambios en Local Storage
+            localStorage.setItem('servicesInfo', newServicesInfo);
+            localStorage.setItem('contactInfo', newContactInfo);
+            localStorage.setItem('groupsInfo', newGroupsInfo);
+            localStorage.setItem('seccion1Info', newSeccion1Info);
+            localStorage.setItem('seccion2Info', newSeccion2Info);
 
-            alert("Cambios guardados exitosamente (solo en localStorage por ahora).");
+            alert("Cambios guardados exitosamente.");
         }
 
         // Cargar información al iniciar la página
