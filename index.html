@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html><html lang="es"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Dr. César Rodríguez</title>
@@ -27,7 +30,7 @@
             text-align: center; /* Centrar el texto */
         }
         nav {
-            margin: 20px ;
+            margin: 20px;
             text-align: center;
         }
         nav button {
@@ -111,11 +114,13 @@
 </head>
 <body>
     <header>
-        <img src="img/ivss.png" alt="Logo del Hospital"> <!-- Cambia "logo.png" por la ruta de tu logo -->
+        <img src="img/ivss.png" alt="Logo del Hospital">
         <h1>Hospital Dr. César Rodríguez</h1>
     </header>
     <nav>
         <button onclick="showSection('inicio')">Inicio</button>
+        <button onclick="showSection('seccion1')">Sección 1</button>
+        <button onclick="showSection('seccion2')">Sección 2</button>
         <button onclick="showSection('servicios')">Servicios</button>
         <button onclick="showSection('contacto')">Contacto</button>
         <button onclick="showSection('grupos')">Grupos de Apoyo</button>
@@ -123,12 +128,13 @@
     </nav>
     
     <section id="inicio">
-       <h2 style="text-align: center;">Reseña Histórica</h2>
-<p id="historical-review" style="text-align: justify;">
-    La historia del hospital se remonta a su fundación por la Mene Grande Oil Company en Barcelona, bajo la dirección del Dr. Gualberto Rossi. El 18 de octubre de 1944, se trasladó a un nuevo edificio en el Campo Guaraguao de Puerto La Cruz, donde el Dr. Felipe Iriarte asumió la dirección y la Sra. Josefina Zabala lideró el equipo de enfermería. En 1965, se estableció el Seguro Social en Anzoátegui, convirtiéndose en el primer hospital del Instituto Venezolano de los Seguros Sociales en la región, gracias a las donaciones de Mene Grande Oil Company y el compromiso de integrar parte de su personal. Inicialmente, contaba con sesenta camas, pero con el tiempo se expandió a doscientas, adaptándose a las crecientes demandas de atención médica.</p>
-<p id="historical-review" style="text-align: justify;">   
-A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en la atención que brinda, desarrollando un programa integral que involucra a pacientes, familias y la comunidad. En 1983, se renombró en honor al Dr. César Rodríguez Rodríguez, un destacado médico cirujano oriundo de Anzoátegui. En sus inicios, el centro ofrecía solo un número limitado de especialidades médicas y carecía de equipos avanzados, con el personal médico y de enfermería luchando para salvar vidas en condiciones difíciles. Aunque no contaba con unidades de terapia intensiva, la dedicación del equipo permitía que muchos pacientes se recuperaran gracias a su esfuerzo y compromiso.</p>
-        
+        <h2 style="text-align: center;">Reseña Histórica</h2>
+        <p id="historical-review" style="text-align: justify;">
+            La historia del hospital se remonta a su fundación por la Mene Grande Oil Company en Barcelona, bajo la dirección del Dr. Gualberto Rossi. El 18 de octubre de 1944, se trasladó a un nuevo edificio en el Campo Guaraguao de Puerto La Cruz, donde el Dr. Felipe Iriarte asumió la dirección y la Sra. Josefina Zabala lideró el equipo de enfermería. En 1965, se estableció el Seguro Social en Anzoátegui, convirtiéndose en el primer hospital del Instituto Venezolano de los Seguros Sociales en la región, gracias a las donaciones de Mene Grande Oil Company y el compromiso de integrar parte de su personal. Inicialmente, contaba con sesenta camas, pero con el tiempo se expandió a doscientas, adaptándose a las crecientes demandas de atención médica.
+        </p>
+        <p id="historical-review" style="text-align: justify;">   
+            A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en la atención que brinda, desarrollando un programa integral que involucra a pacientes, familias y la comunidad. En 1983, se renombró en honor al Dr. César Rodríguez Rodríguez, un destacado médico cirujano oriundo de Anzoátegui. En sus inicios, el centro ofrecía solo un número limitado de especialidades médicas y carecía de equipos avanzados, con el personal médico y de enfermería luchando para salvar vidas en condiciones difíciles. Aunque no contaba con unidades de terapia intensiva, la dedicación del equipo permitía que muchos pacientes se recuperaran gracias a su esfuerzo y compromiso.
+        </p>
         <h3 style="text-align: center;">Ubicación</h3>
         <div class="location-images">
             <img src="img/ubicacion1.jpg" alt="Ubicación 1" style="width: 200px; height: auto;">
@@ -137,24 +143,30 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
         </div>
     </section>
     
+    <section id="seccion1">
+        <h2>Sección 1</h2>
+        <p>Contenido de la Sección 1. Aquí puedes agregar la información que desees presentar.</p>
+    </section>
+
+    <section id="seccion2">
+        <h2>Sección 2</h2>
+        <p>Contenido de la Sección 2. Aquí puedes agregar la información que desees presentar.</p>
+    </section>
+
     <section id="servicios">
         <h2>Servicios</h2>
         <p id="services-info">Ofrecemos una amplia gama de servicios médicos, incluyendo:</p>
-  
     </section>
     
     <section id="contacto">
         <h2>Contacto</h2>
         <p id="contact-info">Para más información, contáctanos al siguiente número:</p>
-        
     </section>
 
     <section id="grupos">
         <h2>Grupos de Apoyo</h2>
         <p id="groups-info">Contamos con grupos de apoyo para diversas necesidades, incluyendo:</p>
-        <ul id="groups-list">
-
-        </ul>
+        <ul id="groups-list"></ul>
     </section>
     
     <div class="login" id="login">
@@ -167,8 +179,6 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
 
     <div class="edit-area hidden" id="edit-area">
         <h2>Editar Información</h2>
-        
-        
         <h3>Servicios</h3>
         <textarea id="services-edit" rows="4" placeholder="Editar información de servicios..."></textarea>
         
@@ -189,14 +199,11 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
         const USERNAME = "ivssguaraguao"; // Usuario proporcionado
         const PASSWORD = "12345678"; // Contraseña proporcionada
 
-        // Cargar información desde Local Storage
         function loadInformation() {
-            
             const servicesInfo = localStorage.getItem('servicesInfo') || "Ofrecemos una amplia gama de servicios médicos, incluyendo:\n- Urgencias\n- Pediatría\n- Ginecología\n- Cirugía General\n- Psicología";
             const contactInfo = localStorage.getItem('contactInfo') || "Para más información, contáctanos al siguiente número:";
             const groupsInfo = localStorage.getItem('groupsInfo') || "Contamos con grupos de apoyo para diversas necesidades, incluyendo:\n- Apoyo psicológico\n- Grupos de pacientes crónicos\n- Asesoramiento familiar";
 
-           
             document.getElementById('services-info').innerText = servicesInfo;
             document.getElementById('contact-info').innerText = contactInfo;
             document.getElementById('groups-info').innerText = groupsInfo;
@@ -222,7 +229,6 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
                 document.getElementById('edit-area').classList.remove('hidden');
 
                 // Cargar los valores actuales en los campos de edición
-              
                 document.getElementById('services-edit').value = document.getElementById('services-info').innerText;
                 document.getElementById('contact-edit').value = document.getElementById('contact-info').innerText;
                 document.getElementById('groups-edit').value = document.getElementById('groups-info').innerText;
@@ -235,25 +241,34 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
         }
 
         function saveEdits() {
-            // Obtener los nuevos valores de los campos de edición
-         
             const newServicesInfo = document.getElementById('services-edit').value;
             const newContactInfo = document.getElementById('contact-edit').value;
             const newGroupsInfo = document.getElementById('groups-edit').value;
 
-            // Actualizar el contenido de las secciones correspondientes
-            
             document.getElementById('services-info').innerText = newServicesInfo;
             document.getElementById('contact-info').innerText = newContactInfo;
-            document.getElementById('groups-info').innerText = newGroupsInfo
+            document.getElementById('groups-info').innerText = newGroupsInfo;
 
-            // Guardar cambios en Local Storage
-           ion
-            localStorage.setItem('servicesInfo', newServicesInfo);
-            localStorage.setItem('contactInfo', newContactInfo);
-            localStorage.setItem('groupsInfo', newGroupsInfo);
+            // Aquí deberías enviar los cambios a un servicio de backend para guardarlos en internet
+            // Ejemplo (necesitarías un backend que soporte esto):
+            /*
+            fetch('https://tu-api.com/guardar', {
+                method: 'POST',
+                body: JSON.stringify({
+                    servicesInfo: newServicesInfo,
+                    contactInfo: newContactInfo,
+                    groupsInfo: newGroupsInfo
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => alert("Cambios guardados exitosamente."))
+            .catch(error => console.error('Error:', error));
+            */
 
-            alert("Cambios guardados exitosamente.");
+            alert("Cambios guardados exitosamente (solo en localStorage por ahora).");
         }
 
         // Cargar información al iniciar la página
@@ -261,6 +276,5 @@ A lo largo de los años, el hospital ha evolucionado en sus instalaciones y en l
         // Muestra la sección de inicio por defecto
         showSection('inicio');
     </script>
-
-
-</body></html>
+</body>
+</html>
