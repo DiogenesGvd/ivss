@@ -140,11 +140,11 @@
             font-weight: bold;
         }
         .location-images img {
+            width: 200px; /* Ajustar el tamaño de las imágenes */
+            height: auto; /* Mantener la proporción */
             margin: 10px; /* Añadir margen a las imágenes */
             border-radius: 8px; /* Bordes redondeados para un mejor diseño */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-            max-width: 90%; /* Ajustar el ancho máximo */
-            height: auto; /* Mantener la proporción */
         }
 
         /* Estilos para dispositivos móviles */
@@ -168,6 +168,10 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste para columnas responsivas */
                 gap: 10px; /* Espacio entre columnas */
+            }
+            .location-images img {
+                width: 100%; /* 100% de ancho en móviles */
+                max-width: 200px; /* Limitar el ancho máximo */
             }
             .contacto-info {
                 gap: 10px; /* Ajuste de espacio */
